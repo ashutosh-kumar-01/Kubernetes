@@ -155,9 +155,6 @@ Today it is maintained by the **Cloud Native Computing Foundation (CNCF).**
 # 5. Kubernetes Architecture
 
 
-
-
-
 Kubernetes Architecture
 
 Kubernetes architecture consists of a Control Plane (manages the cluster) and Worker Nodes (run the applications).
@@ -182,46 +179,44 @@ Kubernetes architecture consists of a Control Plane (manages the cluster) and Wo
    │ Runtime      │     │ Runtime      │
    └──────────────┘     └──────────────┘
 Components (Short Definitions)
-1. Control Plane (Master Node)
-
+# 1. Control Plane (Master Node)
 Manages the entire Kubernetes cluster and makes decisions.
 
-API Server – Entry point for all Kubernetes commands and requests.
-Scheduler – Decides which worker node should run a new Pod.
-Controller Manager – Ensures the cluster stays in the desired state (restarts failed Pods, maintains replicas).
-etcd – A key-value database that stores all cluster configuration and state.
-2. Worker Node
+**API Server – Entry point for all Kubernetes commands and requests.**
+**Scheduler – Decides which worker node should run a new Pod.**
+**Controller Manager – Ensures the cluster stays in the desired state (restarts failed Pods, maintains replicas).**
+**etcd – A key-value database that stores all cluster configuration and state.**
 
+
+# 2. Worker Node
 Runs the actual applications.
 
-kubelet – Communicates with the Control Plane and manages Pods on the node.
-kube-proxy – Handles networking and routes traffic to Pods.
-Container Runtime – Runs containers (e.g., containerd).
-Pods – Smallest deployable unit in Kubernetes that contains one or more containers.
-Easy Example
+**kubelet – Communicates with the Control Plane and manages Pods on the node.**
+**kube-proxy – Handles networking and routes traffic to Pods.**
+**Container Runtime – Runs containers (e.g., containerd).**
+**Pods – Smallest deployable unit in Kubernetes that contains one or more containers.**
+**Easy Example**
 
-Suppose you deploy a website with 3 Pods:
-
+# Suppose you deploy a website with 3 Pods:
 You run kubectl apply.
 The API Server receives the request.
 The Scheduler chooses worker nodes.
 The kubelet starts the Pods.
 If one Pod crashes, the Controller Manager creates a new one automatically.
 kube-proxy routes user traffic to the running Pods.
-Node
-Node in Kubernetes
 
-Definition:
 
+# Node Node in Kubernetes
+# Definition:
 A Node is a physical or virtual machine in a Kubernetes cluster that runs your application containers (Pods).
 
-Main Components of a Node
-kubelet – Manages Pods and communicates with the Control Plane.
-kube-proxy – Handles networking and routes traffic to Pods.
-Container Runtime – Runs the containers (e.g., containerd).
-Pods – The applications running on the node.
-Example
+|Main Components of a Node|
+**kubelet – Manages Pods and communicates with the Control Plane.**
+**kube-proxy – Handles networking and routes traffic to Pods.**
+**Container Runtime – Runs the containers (e.g., containerd).**
+**Pods – The applications running on the node.**
 
+Example
 Suppose you have 2 worker nodes:
 
 Node 1 → Runs Pod A and Pod B
@@ -239,7 +234,7 @@ Definition:
 
 A Kubernetes Cluster is a group of one Control Plane and one or more Worker Nodes that work together to run and manage containerized applications.
 
-Simple Diagram
+# Simple Diagram
             Kubernetes Cluster
       ┌─────────────────────────┐
       │     Control Plane       │
