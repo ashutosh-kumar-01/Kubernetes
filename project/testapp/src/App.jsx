@@ -15,7 +15,7 @@ const App = () => {
               <p className="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">
                 Profile Box
               </p>
-              <h1 className="text-3xl font-black text-slate-950">gomlu don</h1>
+              <h1 className="text-3xl font-black text-slate-950">gomlu don is now updated Now am spiderman</h1>
             </div>
           </div>
 
