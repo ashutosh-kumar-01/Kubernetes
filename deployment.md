@@ -32,3 +32,5 @@ kubectl get services
 minikube service my-webapp
 
 🔹 Why: Opens the application through the Minikube Service.
+
+# new notes
